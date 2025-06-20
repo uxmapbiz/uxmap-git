@@ -21,6 +21,8 @@ To create a mobile-first tool (Flutter + OpenAI) that:
 - [ ] Add a "crawl & snapshot" mode (headless browser or API)
 - [ ] Output PNG + JSON journey
 - [ ] Track user flow time (time per page or dwell time?)
+- [ ] Google Analytics Integration
+- [ ] UI Analysis
 
 ---
 
@@ -28,8 +30,9 @@ To create a mobile-first tool (Flutter + OpenAI) that:
 
 - Use OpenAI GPT API to:
   - Label page purpose (landing, product, checkout, etc.)
-  - Assign UX score (1–5) with rationale
+  - Assign UX score (1–5) with rationale, categorization and combination of categories to give resulting UX score
   - Extract sentiment tone or visual consistency
+- Ranking compared to other sites that have been analyzed. Saving score datas?
 - Maybe experiment with vision models (later)
 
 ---
