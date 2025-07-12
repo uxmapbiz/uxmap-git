@@ -3,6 +3,24 @@
 Chronological changelog of project decisions and feature changes.
 
 ---
+## 2025-07-12 – Day 5
+
+- Integrated Firebase Firestore for saving and retrieving UX analysis results.
+- Refactored backend (`server.py`) to:
+    - Retrieve past analysis results for each website and use as context in AI analysis.
+    - Save new AI analysis results to Firestore only when API is called (removed static test entry).
+- Set up secure deployment on Render using environment variables for Firebase credentials.
+- Fixed frontend (Flutter) UI:
+    - Sidebar now light green, results area and header are white.
+    - “Go Home” button removed from navigation.
+    - Added “Copy to Clipboard” button for AI analysis result.
+    - Removed extra duplicate text at bottom of results.
+- Confirmed data is being saved and retrieved correctly from both frontend and backend.
+- Improved `.gitignore` to protect sensitive keys and build artifacts.
+- Addressed and resolved minor build and UI bugs (e.g., AppBar color, Dart syntax, and hot reload speed).
+- Next steps: further enhance result display, enable trend/relative analysis using stored results, and continue frontend polish.
+
+
 ## 2025-06-28 – Day 4
 
 - Refactored frontend UI to use side navigation for analysis results; removed raw element list from user view
