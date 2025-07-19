@@ -3,6 +3,16 @@
 Chronological changelog of project decisions and feature changes.
 
 ---
+## 2025-07-19 – Day 6
+
+- Completed MVP architecture for journey map: dashboard layout now manages state and navigation for website analysis.
+- Updated max token, truncation to 15,000 input and 1,000 for output (GPT 3.5 turbo limits)
+- Refactored navigation to use `DashboardPage` with sidebar (`SideNav`) and new Home, Journey Map, and Results pages.
+- Updated all screens to use parent-passed props: `websiteUrl` and `onWebsiteSubmitted`.
+- Implemented recursive menu tree in `JourneyMapPage` using `ExpansionTile`.
+- Result page now fetches and displays analysis for the current website.
+
+
 ## 2025-07-12 – Day 5
 
 - Integrated Firebase Firestore for saving and retrieving UX analysis results.
@@ -18,7 +28,7 @@ Chronological changelog of project decisions and feature changes.
 - Confirmed data is being saved and retrieved correctly from both frontend and backend.
 - Improved `.gitignore` to protect sensitive keys and build artifacts.
 - Addressed and resolved minor build and UI bugs (e.g., AppBar color, Dart syntax, and hot reload speed).
-- Next steps: further enhance result display, enable trend/relative analysis using stored results, and continue frontend polish.
+
 
 
 ## 2025-06-28 – Day 4
