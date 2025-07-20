@@ -3,6 +3,17 @@
 Chronological changelog of project decisions and feature changes.
 
 ---
+## 2025-07-20 – Day 7
+
+- Simplified backend: Unified `/analyze` endpoint to return both `ai_analysis` and ranked `clickable_elements` (with `promoted` flag for main navigation/CTAs). Removed redundant `/crawl_menus`.
+- Updated Flutter frontend:
+  - Refactored data flow: Now, `/analyze` is called only once in DashboardPage. Both analysis and journey map data are passed to subpages.
+  - `JourneyMapPage` redesigned: Displays clickable elements as a ranked list, grouped into "Main Navigation" (promoted) and "Other Clickable Elements"—no more tree or ExpansionTile.
+  - `ResultPage` refactored: Now receives `aiAnalysis` directly from DashboardPage—no longer re-fetches from backend, no duplicate API calls.
+  - HomePage updated: Callback now supports async to handle loading during analysis.
+  - DashboardPage manages loading, error, and data state for subpages.
+
+
 ## 2025-07-19 – Day 6
 
 - Completed MVP architecture for journey map: dashboard layout now manages state and navigation for website analysis.
